@@ -1,26 +1,33 @@
 @import "tailwindcss";
 
+@theme {
+  /* Mendefinisikan Warna Custom LaundryIn */
+  --color-primary: #1B32BB;
+  --color-primary-hover: #14248A;
+  
+  --color-secondary: #F3EFE4;
+  --color-secondary-dark: #E5E0D1;
+
+  /* Mendefinisikan Font Family (Default) */
+  --font-sans: Arial, Helvetica, sans-serif;
+}
+
+/* Root Variables & Reset */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: var(--color-secondary); 
+  --foreground: #1e293b;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+}
+
+/* Utility Custom (Glassmorphism) */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
