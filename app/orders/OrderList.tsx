@@ -19,7 +19,7 @@ interface Order {
   notes: string
   laundry_name: string
   partner_phone?: string | null
-  payment_status?: 'paid' | 'unpaid' // Field baru untuk status bayar
+  payment_status?: 'paid' | 'unpaid'
 }
 
 export default function OrderList({ orders }: { orders: Order[] }) {
